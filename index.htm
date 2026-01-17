@@ -27,10 +27,11 @@
                 <a href="" class="cart_btn">Check Cart</a>
             </div>
             <a href="" class="login_btn">Login</a>
-            <div class="night_light">
-                <img src="icons/night-mode.png" alt="" onclick="darklight()" id="night" class="night">
-                <img src="icons/light-mode.png" alt="" onclick="darklight()" id="day" class="light">
-            </div>
+            <input type="checkbox" name="" id="dark-light-input">
+            <label for="dark-light-input" class="night_light">
+                <img src="icons/night-mode.png" alt="" onclick="darklight()" id="night" class="nightMode">
+                <img src="icons/light-mode.png" alt="" onclick="darklight()" id="day"  class="lightMode">
+            </label>
             <input type="checkbox" name="" id="check">
             <label for="check" class="menu_label">
                 <img src="icons/menu_icon.png" class="menu_open"></img>
@@ -40,9 +41,19 @@
     </header>
     <main>
         <div class="hero_section">
-            <img src="icons/left_arrow.png" alt="" onclick="changeImg()" id="arrow_right">
-            <img src="banner pics/banner_2.jpg" alt="" class="img" id="hero_img_1">
-            <img src="icons/right-arrow.png" alt="" onclick="changeImg()" id="arrow_right">
+            <div class="hero_section_child_1">
+                <img src="icons/left_arrow.png" alt="" onclick="changeImg()" id="arrow_right">
+                <div class="hero_banner">
+                    <img src="banner pics/banner_2.jpg" alt="" class="img" id="hero_img_1">
+                </div>
+                <img src="icons/right-arrow.png" alt="" onclick="changeImg()" id="arrow_right">
+            </div>
+            <div class="hero_section_child_2">
+                <div id="order_div" class="order_div">
+                    <img src="icons/delivery-man.png" alt="" class="order_icon">
+                    <a href="" for="order_div" class="oder_btn">Order Now</a>
+                </div>
+            </div>
         </div>
     </main>
 </body>
