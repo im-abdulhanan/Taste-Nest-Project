@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="media.css">
     <script async src="script.js"></script>
 </head>
-<body>
-    <header>
+<body class="light">
+    <header >
         <nav>
             <img src="icons/TesteNest_icon.png" alt="" class="tastenest">
             <div class="ul_div">
@@ -27,6 +27,10 @@
                 <a href="" class="cart_btn">Check Cart</a>
             </div>
             <a href="" class="login_btn">Login</a>
+            <div class="night_light">
+                <img src="icons/night-mode.png" alt="" onclick="darklight()" id="night" class="night">
+                <img src="icons/light-mode.png" alt="" onclick="darklight()" id="day" class="light">
+            </div>
             <input type="checkbox" name="" id="check">
             <label for="check" class="menu_label">
                 <img src="icons/menu_icon.png" class="menu_open"></img>
@@ -36,9 +40,9 @@
     </header>
     <main>
         <div class="hero_section">
-            <img src="icons/arrow_left.png" alt="" onclick="changeImgtoLeft()" id="arrow_right">
-            <img src="banner pics/banner_2.jpg" alt="" id="hero_img_1">
-            <img src="icons/arrow-right.png" alt="" onclick="changeImgtoRight()" id="arrow_right">
+            <img src="icons/left_arrow.png" alt="" onclick="changeImg()" id="arrow_right">
+            <img src="banner pics/banner_2.jpg" alt="" class="img" id="hero_img_1">
+            <img src="icons/right-arrow.png" alt="" onclick="changeImg()" id="arrow_right">
         </div>
     </main>
 </body>
