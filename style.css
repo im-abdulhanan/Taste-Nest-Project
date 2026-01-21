@@ -21,7 +21,7 @@ nav{
     align-items: center;
 }
 nav > input{
-    display: flex;
+    display: none;
 }
 nav >  .menu_input_label_div > label > img{
     /* position: absolute; */
