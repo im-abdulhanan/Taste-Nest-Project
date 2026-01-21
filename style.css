@@ -70,6 +70,9 @@ nav > .login_cart_div > a{
 nav .dark_light_mode_div > input{
     display: none;
 }
+.darklight_label > img {
+    cursor: pointer;
+ }
 
 nav .dark_light_mode_div > label > .light_icon{
     display: none;
