@@ -30,27 +30,29 @@ var products = [
     {
         id: 1,
         mainImg: "./1Headphones/headphone2.jpg",
-        smallImg: [
-            "./1Headphones/headphone1.jpg",
-            "./1Headphones/headphone2.jpg",
-            "./1Headphones/headphone3.jpg",
-            "./1Headphones/headphone4.jpg",
-            "./1Headphones/headphone5.jpg",
+        title: "Apple Wireless Headphones",
+        stars: [
+            "./icons/fill_start.png",
+            "./icons/fill_start.png",
+            "./icons/fill_start.png",
+            "./icons/fill_start.png",
+            "./icons/empty_star.png",
         ],
-        title: "Apple Red Headphones",
+        sold: 100,
         price: 199,
     },
     {
         id: 2,
         mainImg: "./2protine /ptnOne.jpeg",
-        smallImg: [
-            "./2protine /ptnOne.jpeg",
-            // "./2protine /ptnTwo.jpeg",
-            "./2protine /ptnThree.jpeg",
-            "./2protine /ptnFour.jpeg",
-            "./2protine /ptnFive.jpeg",
+        title: "Nitro Teach Supplement",
+        stars: [
+            "./icons/fill_start.png",
+            "./icons/fill_start.png",
+            "./icons/fill_start.png",
+            "./icons/fill_start.png",
+            "./icons/half_star.png"
         ],
-        title: "Nitro Teach",
+        sold: 100,
         price: 999,
     },
 ];
@@ -62,21 +64,36 @@ products.forEach(function (item) {
     var imgDiv = document.createElement("div");
     imgDiv.classList.add("imgDiv");
     imgDiv.innerHTML = "<img src=\"".concat(item.mainImg, "\" class = \"mainIMG\" alt=\"\">");
-    //small img div
-    var smallImgDiv = document.createElement("div");
-    smallImgDiv.classList.add("smallImgBox");
-    // append it into smallImgDiv
-    item.smallImg.forEach(function (img) {
-        var smallImgBoxes = document.createElement("img");
-        smallImgBoxes.classList.add("smallImages");
-        smallImgBoxes.src = img;
-        smallImgDiv.appendChild(smallImgBoxes);
-    });
     //Description
     var DescriptionDiv = document.createElement("div");
-    DescriptionDiv.innerHTML = "\n  <h2>".concat(item.title, "</h2>\n  <h3>").concat(item.price, "</h3>\n  ");
+    var starDiv = document.createElement("div");
+    starDiv.classList.add("starDiv");
+    DescriptionDiv.classList.add("desDiv");
+    DescriptionDiv.innerHTML = "\n  <h2>".concat(item.title, "</h2>\n  <h3>Price: $").concat(item.price, "</h3>\n  ");
+    item.stars.forEach(function (item) {
+        var starsImg = document.createElement("img");
+        starsImg.classList.add("starsImg");
+        starsImg.src = item;
+        starDiv.appendChild(starsImg);
+    });
+    var soldWrite = document.createElement("span");
+    soldWrite.classList.add("sold");
+    soldWrite.innerHTML = "<span>".concat(item.sold, " SOLD</span>");
+    starDiv.appendChild(soldWrite);
+    //btn
+    var btn_cart_Div = document.createElement("div");
+    btn_cart_Div.classList.add("btnCart");
+    var btn = document.createElement("a");
+    btn.classList.add("cartBTN");
+    btn.innerText = "ADD TO CART";
+    var cartIcon = document.createElement("img");
+    cartIcon.classList.add("BTNcartIcon");
+    cartIcon.src = "./icons/add_shopping_cart.png";
+    btn_cart_Div.appendChild(btn);
+    btn_cart_Div.appendChild(cartIcon);
     card.appendChild(imgDiv);
-    card.appendChild(smallImgDiv);
     card.appendChild(DescriptionDiv);
+    card.appendChild(starDiv);
+    card.appendChild(btn_cart_Div);
     cardDiv.appendChild(card);
 });

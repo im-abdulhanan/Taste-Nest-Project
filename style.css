@@ -89,7 +89,7 @@ nav .loginDiv img {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
 }
 .bannerDiv {
   width: 70%;
@@ -114,26 +114,74 @@ nav .loginDiv img {
   height: 100%;
   border: 1px solid;
   display: flex;
+  padding: 10px 10px;
 }
 
 /* Cards */
-.cardBox{
-  width: 30%;
+.cardBox {
+  width: 25%;
   height: 50vh;
-  border: 1px solid red;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 2px 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(160, 160, 160);
 }
-.imgDiv{
-  width: 50%;
-}
-.mainIMG{
-  width: 120%;
-}
-.smallImgBox{
+.imgDiv {
+  /* border: 1px solid; */
   width: 100%;
-  height: 5vh;
-  border: 1px solid black;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.smallImages{
-  width: 15%
+.imgDiv .mainIMG {
+  width: 60%;
+  /* object-fit: cover; */
+}
+.desDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px 10px;
+  /* border: 1px solid; */
+  width: 100%;
+  height: 20%;
+}
+.desDiv h2,
+h3 {
+  font-family: "fontTwo";
+}
+.starDiv {
+  /* border: 1px solid; */
+  width: 100%;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+.sold{
+  color: gray;
+  padding-left: 10px;
+}
+.starsImg{
+  width: 4%;
+}
+
+.btnCart {
+  /* border: 1px solid; */
+  width: 60%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgb(145, 0, 48);
+}
+.btnCart .cartBTN {
+  font-family: "fontTwo";
+  font-weight: 900;
+  color: white;
 }
