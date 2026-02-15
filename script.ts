@@ -159,6 +159,62 @@ var products: Product[] = [
     sold: 953,
     price: 159,
   },
+  {
+    id: 9,
+    mainImg: "./6sports shirts 2/shirtOne.webp",
+    title: "Black Spider GYM t-shirt",
+    stars: [
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/empty_star.png",
+    ],
+    sold: 312,
+    price: 159,
+  },
+  {
+    id: 10,
+    mainImg: "./4watches/watch3.jpg",
+    title: "Black Watch for Men",
+    stars: [
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/empty_star.png",
+      "./icons/empty_star.png",
+    ],
+    sold: 112,
+    price: 139,
+  },
+  {
+    id: 11,
+    mainImg: "./10iphonecase/caseOne.webp",
+    title: "Iphone cover case",
+    stars: [
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/empty_star.png",
+    ],
+    sold: 2022,
+    price: 59,
+  },
+  {
+    id: 12,
+    mainImg: "./9halfpait/paintTwo.webp",
+    title: "Boxing Half paint",
+    stars: [
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/fill_star.png",
+      "./icons/half_star.png",
+    ],
+    sold: 206,
+    price: 39,
+  },
 ];
 
 products.forEach((item) => {
@@ -210,4 +266,15 @@ products.forEach((item) => {
   card.appendChild(btn_cart_Div);
 
   cardDiv.appendChild(card);
+
+  var indexCart: number = 0;
+
+  const cartCount = document.getElementById("cartCounts") as HTMLElement;
+  card.addEventListener("click", function (e) {
+    const target = e.target as HTMLElement;
+    if (target.classList.contains("cartBTN")) {
+      indexCart++;
+      cartCount.innerText = indexCart.toString();
+    }
+  });
 });

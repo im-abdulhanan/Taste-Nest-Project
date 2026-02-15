@@ -111,13 +111,13 @@ nav .loginDiv img {
   transform: rotate(-180deg);
 }
 #cardDisplay {
-  width: 90%;
+  width: 80%;
   height: 100%;
-  border: 1px solid;
+  /* border: 1px solid; */
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  row-gap: 20px;
+  row-gap: 10px;
   padding: 10px 10px;
 }
 
@@ -183,7 +183,12 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   border-radius: 5px;
+  background-color: rgba(145, 0, 48,0.85);
+  cursor: pointer;
+}
+.btnCart:hover{
   background-color: rgb(145, 0, 48);
 }
 .btnCart .cartBTN {
